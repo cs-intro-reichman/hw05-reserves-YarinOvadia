@@ -9,11 +9,15 @@ public class GameOfLife {
 
     public static void main(String[] args) {
         String fileName = args [0];
+        /*
         //// Uncomment the test that you want to execute, and re-compile.
         //// (Run one test at a time).
          //test1(fileName);
-         test2(fileName);
-         //test3(fileName, 3);
+         //test2(fileName);
+         */
+         
+         
+         test3(fileName, 3);
          play(fileName);
 
     }
@@ -21,7 +25,7 @@ public class GameOfLife {
     // Reads the data file and prints the initial board.
     public static void test1(String fileName) {
         int[][] board = read(fileName);
-        //print(board);
+        print(board);
     }
         
     // Reads the data file, and runs a test that checks 
@@ -80,9 +84,17 @@ public class GameOfLife {
     // Creates a new board from the given board, using the rules of the game.
     // Uses the cellValue(board,i,j) function to compute the value of each 
     // cell in the new board. Returns the new board.
-    public static int[][] evolve(int[][] board) {
-		//// Replace the following statement with your code.
-		return null;
+   public static int[][] evolve(int[][] board) {
+		int n= board.length;
+		int m= board[0].length;
+		int[][] newboard= new int[n][m];
+
+		for(int i=1 ; i<n-1; i++){
+			for(int j=1 ; j<m-1; j++){
+				newboard[i][j] = cellValue(board,i, j);
+			}
+		}
+		return newboard;
 	}
 	
 
