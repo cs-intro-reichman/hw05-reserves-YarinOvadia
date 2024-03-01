@@ -17,7 +17,7 @@ public class GameOfLife {
          */
          
          
-         test3(fileName, 3);
+         //test3(fileName, 3);
          play(fileName);
 
     }
@@ -25,7 +25,7 @@ public class GameOfLife {
     // Reads the data file and prints the initial board.
     public static void test1(String fileName) {
         int[][] board = read(fileName);
-        //print(board);
+        print(board);
     }
         
     // Reads the data file, and runs a test that checks 
